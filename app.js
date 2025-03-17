@@ -31,11 +31,11 @@ function atualizarListaTela() {
 
 //Verifica se a quantia de nomes é suficiente, sorteia um dos nome adicionados e o mostra na tela.  
 function sortearAmigo(){
-    if (amigos < 2){
+    let quantiaAmigos = amigos.length;
+    if (quantiaAmigos < 3){
         alert('Adicione ao menos 3 nomes!');
         return;
     } else{
-        let quantiaAmigos = amigos.length;
         let indexLista = (Math.floor(Math.random()*quantiaAmigos));
         let amigoSorteado = amigos[indexLista];
         document.getElementById('resultado').textContent = `O amigo sorteado foi: ${amigoSorteado}`;
